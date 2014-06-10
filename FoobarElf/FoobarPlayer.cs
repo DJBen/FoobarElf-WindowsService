@@ -91,6 +91,7 @@ namespace FoobarElf
                 Console.WriteLine("No song is currently playing");
             }
 
+            // Grab current position and total length information
             HtmlAgilityPack.HtmlNode progressNode = document.DocumentNode.SelectSingleNode("//tr[@id='progress']");
             if (progressNode == null) return;
             Dictionary<string, string> progress = JsonConvert.DeserializeObject<Dictionary<string, string>>(progressNode.InnerText);
