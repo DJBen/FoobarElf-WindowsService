@@ -11,7 +11,7 @@ using System.IO;
 
 namespace FoobarElf
 {
-    class FoobarPlayer
+    public class FoobarPlayer
     {
         private string fireBase;
 

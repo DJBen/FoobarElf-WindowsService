@@ -10,12 +10,31 @@ namespace FoobarElf
     {
         public static int ToInt(string intString)
         {
-            return Convert.ToInt32(intString);
+            int result = -1;
+            try
+            {
+                result = Convert.ToInt32(intString);
+            }
+            catch
+            {
+                return -1;
+            }
+            return result;
         }
 
         public static bool ToBool(string boolString)
         {
-            return Convert.ToBoolean(Convert.ToInt16(boolString));
+            bool result = false;
+            try
+            {
+                result = Convert.ToBoolean(Convert.ToInt16(boolString));
+            }
+            catch
+            {
+                Console.WriteLine("Warning");
+                return false;
+            }
+            return result;
         }
     }
 }
